@@ -15,7 +15,7 @@ console.log(defaultBook); // Output: { title: 'The Great Gatsby', author: 'F. Sc
 
 // TODO 1: Create a factory function named `createPet`
 // This function should return an object with default properties:
-// - name: 'Buddy'
+// - name: 'creole'
 // - species: 'Dog'
 // - age: 2
 
@@ -59,8 +59,23 @@ console.log(specificBook); // Output: { title: '1984', author: 'George Orwell', 
 // - species
 // - age
 
+function createPetWithDetails(name, species, age){
+  return{
+  name: name,
+  species: species,
+  age: age
+  };
+}
 
+const specificPet = createPetWithDetails('creole', 'dog', 2);
+console.log(specificPet);
 // Example 4: Factory Function with Arguments
+function createCarWithDetails(brand, model, year) {
+}
+
+console.log("\nExample 4: Factory Function with Arguments");
+const specificCar = createCarWithDetails('Infinitty', 'Model i30', 2022);
+console.log(specificCar); // Output: { brand: 'Infinity', model: 'Model i30', year: 2022 }
 function createCarWithDetails(brand, model, year) {
   return {
     brand: brand,
@@ -69,9 +84,7 @@ function createCarWithDetails(brand, model, year) {
   };
 }
 
-console.log("\nExample 4: Factory Function with Arguments");
-const specificCar = createCarWithDetails('Tesla', 'Model S', 2021);
-console.log(specificCar); // Output: { brand: 'Tesla', model: 'Model S', year: 2021 }
+
 
 // TODO 4: Create a factory function named `createCityWithDetails`
 // This function should accept three arguments to set the properties:
@@ -94,8 +107,8 @@ function createPetWithMethod(name, species, age) {
 }
 
 console.log("\nExample 5: Factory Function with Method");
-const myPet = createPetWithMethod('Bella', 'Dog', 4);
-myPet.celebrateBirthday(); // Output: Happy Birthday Bella! You are now 5 years old.
+const myPet = createPetWithMethod('shu shu', 'Dog', 1);
+myPet.celebrateBirthday(); // Output: Happy Birthday shu shu! You are now 2 years old.
 
 // TODO 5: Create a factory function named `createCityWithMethod`
 // This function should accept three arguments to set the properties:
