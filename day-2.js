@@ -69,7 +69,30 @@ console.log(pet.name);  // Output: Paws
 // TODO 2: Add a method to `city` object
 // Add a method named `addPopulation` that increases the `population` property by a given number.
 // Add another method named `rename` that updates the `name` property using `this`.
+const city = {
+  name: 'Covington',
+  population: 11,641 // Changed to a number
+  country: 'USA',
+  parish: 'St tammany',
+  year: 1813,
 
+  status: function () {
+    console.log(`${this.city} has ${this.population} people in it.`)
+  },
+  addPopulation: function () {
+    this.population += 2000;
+    console.log(`${this.name} in 2024 had a population of 11,641. Looking at trends, it may increase by ${this.population}.`);
+  },
+  rename: function (newName) {
+    this.name = newName;
+    console.log(`when established covington was first called town of Wharton ${this.name}.`);
+  }
+};
+city.status();
+city.addPopulation();
+city.status();
+city.rename('Wharton');
+console.log(city.name);
 
 // Example 3: Adding Methods to a Car Object
 const car = {
@@ -92,16 +115,28 @@ console.log(car.year); // Output: 2023
 // TODO 3: Add a method to `computer` object
 // Add a method named `upgradeRAM` that updates the `ram` property.
 // Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
-
+  
+}
 
  // Example 4: Adding Methods to a Product Object
+ const computer = {
+  brand: 'HP all in one 27',
+  processor: 'Ultra 7',
+  ram: 16
+};
+console.log(computer.brand);
+console.log(computer.processor);
+console.log(computer.ram);
+// Example 4: Creating a Product Object
 const product = {
-  name: 'Laptop',
-  price: 999.99,
-  inStock: true,
-  applyDiscount(discount) {
-    this.price -= discount;
-    console.log(`Discount applied! New price is $${this.price}.`);
+  name: 'Desktop',
+  price: 687.00,
+  inStock: true
+};
+console.log("\nExample 4: Product Object");
+console.log(product.name);    // Output: Desktop
+console.log(product.price);   // Output: 687.00
+console.log(product.inStock); // Output: true
   },
   updateStock(status) {
     this.inStock = status;
@@ -141,3 +176,13 @@ console.log(student.fullName()); // Output: John Doe
 // Add a method named `renovate` that increases the `size` property by a given number.
 // Add another method named `changeAddress` that updates the `address` property.
 
+const house = {
+  address: '4417 5th st, covington, LA 70433',
+  size: '4 bed 2 1/2 bath',
+  size: '2400',
+  hasGarage: true
+};
+
+console.log(house.address);
+console.log(house.size);
+console.log(house.hasGarage);

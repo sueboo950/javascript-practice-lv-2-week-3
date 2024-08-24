@@ -1,93 +1,197 @@
-// File: objectPractice.js
+// File: objectMethods.js
 
-console.log("Object Practice Exercise");
+console.log("Object Methods Exercise");
 
-// Example 1: Creating a Basic Object
+// Example 1: Adding Methods to a Book Object
 const book = {
   title: 'To Kill a Mockingbird',
   author: 'Harper Lee',
-  pages: 281
+  pages: 281,
+  read() {
+    console.log(`${this.title} by ${this.author} has been read.`);
+  },
+  updatePages(newPages) {
+    this.pages = newPages;
+  }
 };
 
-console.log("Example 1: Basic Object");
-console.log(book.title);  // Output: To Kill a Mockingbird
-console.log(book.author); // Output: Harper Lee
-console.log(book.pages);  // Output: 281
+console.log("Example 1: Book Object with Methods");
+book.read();           // Output: To Kill a Mockingbird by Harper Lee has been read.
+console.log(book.pages); // Output: 281
+book.updatePages(300);
+console.log(book.pages); // Output: 300
 
-// TODO 1: Create a `movie` object
-// Create an object named `movie` with the following properties:
-// `title` (string), `director` (string), `year` (number)
-// Log each property using dot notation.
+// TODO 1: Add a method to `movie` object
+// Add a method named `watch` that logs a message: "You watched {movie.title}."
+// Add another method named `updateYear` that updates the `year` property.
+// Use `this` to access and modify the properties.
+const movie = {
+  title: 'Pretty Woman',
+  director: 'Gary Marshall',
+  leading: 'Julia Roberts',
+  year: 1990,
+
+  watch: function () {
+    console.log(`${this.title} directed by ${this.director}, starring ${this.leading} made in ${this.year} has been watched. It is emotional and touching!`);  
+  },
+  
+  updateMovie: function(newYear) {
+    this.year = newYear;
+  }
+};
+
+console.log(movie.title);
+console.log(movie.year);
+movie.watch();
+movie.updateMovie(1990);
+console.log(movie.year);
 
 
-// Example 2: Creating a Pet Object
+// Example 2: Adding Methods to a Pet Object
 const pet = {
   name: 'Whiskers',
   species: 'Cat',
-  age: 5
+  age: 5,
+  celebrateBirthday() {
+    this.age += 1;
+    console.log(`Happy Birthday ${this.name}! You are now ${this.age} years old.`);
+  },
+  rename(newName) {
+    this.name = newName;
+  }
 };
 
-console.log("\nExample 2: Pet Object");
-console.log(pet.name);    // Output: Whiskers
-console.log(pet.species); // Output: Cat
-console.log(pet.age);     // Output: 5
+console.log("\nExample 2: Pet Object with Methods");
+pet.celebrateBirthday(); // Output: Happy Birthday Whiskers! You are now 6 years old.
+pet.rename('Paws');
+console.log(pet.name);  // Output: Paws
 
-// TODO 2: Create a `city` object
-// Create an object named `city` with the following properties:
-// `name` (string), `population` (number), `country` (string)
-// Log each property using dot notation.
+// TODO 2: Add a method to `city` object
+// Add a method named `addPopulation` that increases the `population` property by a given number.
+// Add another method named `rename` that updates the `name` property using `this`.
+const city = {
+  name: 'Covington',
+  population: 11,641 // Changed to a number
+  country: 'USA',
+  parish: 'St tammany',
+  year: 1813,
 
+  status: function () {
+    console.log(`${this.city} has ${this.population} people in it.`)
+  },
+  addPopulation: function () {
+    this.population += 2000;
+    console.log(`${this.name} in 2024 had a population of 11,641. Looking at trends, it may increase by ${this.population}.`);
+  },
+  rename: function (newName) {
+    this.name = newName;
+    console.log(`when established covington was first called town of Wharton ${this.name}.`);
+  }
+};
+city.status();
+city.addPopulation();
+city.status();
+city.rename('Wharton');
+console.log(city.name);
 
-// Example 3: Creating a Car Object
+// Example 3: Adding Methods to a Car Object
 const car = {
   brand: 'Toyota',
   model: 'Corolla',
-  year: 2021
+  year: 2021,
+  drive() {
+    console.log(`Driving a ${this.brand} ${this.model} (${this.year}).`);
+  },
+  updateYear(newYear) {
+    this.year = newYear;
+  }
+  const restaurant ={
+    name: 'Chick fila',
+    type: 'fast',
+    rating: 4.5
+  };
+  
+  console.log(restaurant.name);
+  console.log(restaurant.type);
+  console.log(restaurant.rating);
 };
 
-console.log("\nExample 3: Car Object");
-console.log(car.brand);  // Output: Toyota
-console.log(car.model);  // Output: Corolla
-console.log(car.year);   // Output: 2021
+console.log("\nExample 3: Car Object with Methods");
+car.drive();        // Output: Driving a Toyota Corolla (2021).
+car.updateYear(2023);
+console.log(car.year); // Output: 2023
 
-// TODO 3: Create a `computer` object
-// Create an object named `computer` with the following properties:
-// `brand` (string), `processor` (string), `ram` (number)
-// Log each property using dot notation.
+// TODO 3: Add a method to `computer` object
+// Add a method named `upgradeRAM` that updates the `ram` property.
+// Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
+  
+}
 
-
+ // Example 4: Adding Methods to a Product Object
+ const computer = {
+  brand: 'HP all in one 27',
+  processor: 'Ultra 7',
+  ram: 16
+};
+console.log(computer.brand);
+console.log(computer.processor);
+console.log(computer.ram);
 // Example 4: Creating a Product Object
 const product = {
-  name: 'Laptop',
-  price: 999.99,
+  name: 'Desktop',
+  price: 687.00,
   inStock: true
 };
-
 console.log("\nExample 4: Product Object");
-console.log(product.name);    // Output: Laptop
-console.log(product.price);   // Output: 999.99
+console.log(product.name);    // Output: Desktop
+console.log(product.price);   // Output: 687.00
 console.log(product.inStock); // Output: true
+  },
+  updateStock(status) {
+    this.inStock = status;
+  }
+};
 
-// TODO 4: Create a `restaurant` object
-// Create an object named `restaurant` with the following properties:
-// `name` (string), `type` (string), `rating` (number)
-// Log each property using dot notation.
+console.log("\nExample 4: Product Object with Methods");
+product.applyDiscount(100); // Output: Discount applied! New price is $899.99.
+console.log(product.price);  // Output: 899.99
+product.updateStock(false);
+console.log(product.inStock); // Output: false
+
+// TODO 4: Add a method to `restaurant` object
+// Add a method named `changeRating` that updates the `rating` property.
+// Add another method named `reopen` that sets the `inStock` property to true.
 
 
-// Example 5: Creating a Student Object
+// Example 5: Adding Methods to a Student Object
 const student = {
   firstName: 'John',
   lastName: 'Doe',
-  grade: 'A'
+  grade: 'A',
+  updateGrade(newGrade) {
+    this.grade = newGrade;
+    console.log(`${this.firstName} ${this.lastName} is now in grade ${this.grade}.`);
+  },
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 };
 
-console.log("\nExample 5: Student Object");
-console.log(student.firstName); // Output: John
-console.log(student.lastName);  // Output: Doe
-console.log(student.grade);     // Output: A
+console.log("\nExample 5: Student Object with Methods");
+student.updateGrade('B');  // Output: John Doe is now in grade B.
+console.log(student.fullName()); // Output: John Doe
 
-// TODO 5: Create a `house` object
-// Create an object named `house` with the following properties:
-// `address` (string), `size` (number), `hasGarage` (boolean)
-// Log each property using dot notation.
+// TODO 5: Add a method to `house` object
+// Add a method named `renovate` that increases the `size` property by a given number.
+// Add another method named `changeAddress` that updates the `address` property.
 
+const house = {
+  address: '4417 5th st, covington, LA 70433',
+  size: '4 bed 2 1/2 bath',
+  size: '2400',
+  hasGarage: true
+};
+
+console.log(house.address);
+console.log(house.size);
+console.log(house.hasGarage);
