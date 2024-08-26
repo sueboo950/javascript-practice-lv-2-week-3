@@ -49,7 +49,7 @@ console.log(movie.year);
 
 // Example 2: Adding Methods to a Pet Object
 const pet = {
-  name: 'Whiskers',
+  name: 'Bell',
   species: 'Cat',
   age: 5,
   celebrateBirthday() {
@@ -72,9 +72,9 @@ console.log(pet.name);  // Output: Paws
 const city = {
   name: 'Covington',
   population: 11,641 // Changed to a number
-  country: 'USA',
+  Country: 'USA',
   parish: 'St tammany',
-  year: 1813,
+  year: '1813',
 
   status: function () {
     console.log(`${this.city} has ${this.population} people in it.`)
@@ -108,7 +108,7 @@ const car = {
   const restaurant ={
     name: 'Chick fila',
     type: 'fast',
-    rating: 4.5
+    rating: 4
   };
   
   console.log(restaurant.name);
