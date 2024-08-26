@@ -153,7 +153,7 @@ console.log(product.inStock); // Output: false
 // Add a method named `changeRating` that updates the `rating` property.
 // Add another method named `reopen` that sets the `inStock` property to true.
 
-
+}
 // Example 5: Adding Methods to a Student Object
 const student = {
   firstName: 'John',

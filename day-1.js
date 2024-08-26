@@ -124,11 +124,9 @@ console.log(car.year); // Output: 2023
 // TODO 3: Add a method to `computer` object
 // Add a method named `upgradeRAM` that updates the `ram` property.
 // Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
-  
-}
 
  // Example 4: Adding Methods to a Product Object
- const computer = {
+const computer = {
   brand: 'HP all in one 27',
   processor: 'Ultra 7',
   ram: 16
