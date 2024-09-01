@@ -32,22 +32,20 @@ const movie = {
   year: 1990,
 
   watch: function () {
-    console.log(`${this.title} directed by ${this.director}, starring ${this.leading} made in ${this.year} has been watched. It is emotional and touching!`);  
+    console.log(`You watched ${this.title} directed by ${this.director}, starring ${this.leading}.`);
   },
   
-  updateMovie: function(newYear) {
+  updateYear: function(newYear) {
     this.year = newYear;
   }
 };
 
 console.log(movie.title);
 console.log(movie.year);
-movie.watch();
-movie.updateMovie(1990);
-console.log(movie.year);
-
-
-// Example 2: Adding Methods to a Pet Object
+movie.watch();           // Output: You watched Pretty Woman directed by Gary Marshall, starring Julia Roberts.
+movie.updateYear(1991);
+console.log(movie.year); // Output: 1991
+ // Example 2: Adding Methods to a Pet Object
 const pet = {
   name: 'Bell',
   species: 'Cat',
@@ -62,23 +60,47 @@ const pet = {
 };
 
 console.log("\nExample 2: Pet Object with Methods");
-pet.celebrateBirthday(); // Output: Happy Birthday Whiskers! You are now 6 years old.
+pet.celebrateBirthday(); // Output: Happy Birthday Bell! You are now 6 years old.
 pet.rename('Paws');
 console.log(pet.name);  // Output: Paws
 
 // TODO 2: Add a method to `city` object
 // Add a method named `addPopulation` that increases the `population` property by a given number.
-// Add another method named `rename` that updates the `name` property using `this`.
+// Add another method named `rename` that updates the `name` property.
+
+const city = {
+  name: 'New Orleans',
+  population: 390000,
+  
+  addPopulation: function (amount) {
+    this.population += amount;
+
+  }
+};
+  
+  rename: function(newName) {
+    this.name = newName;
+  }
+
+
+
+console.log("\nExample 3: City Object with Methods");
+console.log(city.name);       // Output: New Orleans
+console.log(city.population); // Output: 390000
+city.addPopulation(10000);
+console.log(city.population); // Output: 400000
+city.rename('NOLA');
+
 const city = {
   name: 'Covington',
-  population: 11,641 // Changed to a number
-  Country: 'USA',
+  population: 11641, // Changed to a number
+  country: 'USA',
   parish: 'St tammany',
-  year: '1813',
+  year: 1813,
 
   status: function () {
-    console.log(`${this.city} has ${this.population} people in it.`)
-  },
+    console.log(`${this.city} has ${this.population} people in it.`);
+  }
   addPopulation: function () {
     this.population += 2000;
     console.log(`${this.name} in 2024 had a population of 11,641. Looking at trends, it may increase by ${this.population}.`);
@@ -98,22 +120,13 @@ console.log(city.name);
 const car = {
   brand: 'Toyota',
   model: 'Corolla',
-  year: 2021,
+  year: 2023,
   drive() {
     console.log(`Driving a ${this.brand} ${this.model} (${this.year}).`);
   },
   updateYear(newYear) {
     this.year = newYear;
   }
-  const restaurant ={
-    name: 'Chick fila',
-    type: 'fast',
-    rating: 4
-  };
-  
-  console.log(restaurant.name);
-  console.log(restaurant.type);
-  console.log(restaurant.rating);
 };
 
 console.log("\nExample 3: Car Object with Methods");
@@ -144,11 +157,10 @@ console.log("\nExample 4: Product Object");
 console.log(product.name);    // Output: Desktop
 console.log(product.price);   // Output: 687.00
 console.log(product.inStock); // Output: true
-  },
+
   updateStock(status) {
     this.inStock = status;
   }
-};
 
 console.log("\nExample 4: Product Object with Methods");
 product.applyDiscount(100); // Output: Discount applied! New price is $899.99.
@@ -159,8 +171,6 @@ console.log(product.inStock); // Output: false
 // TODO 4: Add a method to `restaurant` object
 // Add a method named `changeRating` that updates the `rating` property.
 // Add another method named `reopen` that sets the `inStock` property to true.
-
-
 // Example 5: Adding Methods to a Student Object
 const student = {
   firstName: 'John',

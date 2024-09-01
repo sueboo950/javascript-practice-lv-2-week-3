@@ -49,7 +49,7 @@ console.log(movie.year);
 
 // Example 2: Adding Methods to a Pet Object
 const pet = {
-  name: 'Whiskers',
+  name: 'Bell',
   species: 'Cat',
   age: 5,
   celebrateBirthday() {
@@ -71,8 +71,8 @@ console.log(pet.name);  // Output: Paws
 // Add another method named `rename` that updates the `name` property using `this`.
 const city = {
   name: 'Covington',
-  population: 11,641 // Changed to a number
-  country: 'USA',
+  population: 11641, // Changed to a number
+  Country: 'USA',
   parish: 'St tammany',
   year: 1813,
 
@@ -115,11 +115,9 @@ console.log(car.year); // Output: 2023
 // TODO 3: Add a method to `computer` object
 // Add a method named `upgradeRAM` that updates the `ram` property.
 // Add another method named `describe` that logs a message with the `brand`, `processor`, and `ram` properties.
-  
-}
 
  // Example 4: Adding Methods to a Product Object
- const computer = {
+const computer = {
   brand: 'HP all in one 27',
   processor: 'Ultra 7',
   ram: 16
@@ -137,11 +135,11 @@ console.log("\nExample 4: Product Object");
 console.log(product.name);    // Output: Desktop
 console.log(product.price);   // Output: 687.00
 console.log(product.inStock); // Output: true
-  },
+
   updateStock(status) {
     this.inStock = status;
   }
-};
+
 
 console.log("\nExample 4: Product Object with Methods");
 product.applyDiscount(100); // Output: Discount applied! New price is $899.99.
@@ -153,7 +151,7 @@ console.log(product.inStock); // Output: false
 // Add a method named `changeRating` that updates the `rating` property.
 // Add another method named `reopen` that sets the `inStock` property to true.
 
-}
+
 // Example 5: Adding Methods to a Student Object
 const student = {
   firstName: 'John',
